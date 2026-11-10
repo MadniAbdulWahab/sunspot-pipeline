@@ -37,7 +37,7 @@ Environment: Windows 11, Python 3.11.8, pandas 3.1.1, numpy 2.4.6, Streamlit 1.6
 | `docker build -t sunspot-pipeline .` | not run locally: Docker Desktop's engine wasn't running on this machine. The image builds successfully in CI (see below) |
 | `git push -u origin main` | pushed to https://github.com/MadniAbdulWahab/sunspot-pipeline |
 | GitHub Actions CI | **passing**, [run 42901280637](https://github.com/MadniAbdulWahab/sunspot-pipeline/actions/runs/42901280637): `test (3.11)` success, `test (3.12)` success (lint + pytest in each), `docker` build success |
-| Live URL (Streamlit Community Cloud) | **https://sunspot-pipeline-aqekwxhqpwanxycgiqybcz.streamlit.app/**. On first start it ran the pipeline itself (run `20261110T211617Z-5ecef8eb`). The input fingerprint `5ecef8eb` is the same as the local run's, and it gives the same quality and reconciliation results |
+| Live URL (Streamlit Community Cloud) | **https://sunspot-pipeline.streamlit.app/**. On first start it ran the pipeline itself (run `20261110T211617Z-5ecef8eb`). The input fingerprint `5ecef8eb` is the same as the local run's, and it gives the same quality and reconciliation results |
 
 Input files for that run (SILSO `Last-Modified` 2026-11-01):
 
