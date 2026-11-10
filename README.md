@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/MadniAbdulWahab/sunspot-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/MadniAbdulWahab/sunspot-pipeline/actions/workflows/ci.yml)
 
+**Live app:** https://sunspot-pipeline-aqekwxhqpwanxycgiqybcz.streamlit.app/
+
 A small, end-to-end science data pipeline built around the WDC-SILSO sunspot number series from the
 Royal Observatory of Belgium. It downloads the raw files, validates every row, recomputes the monthly
 means and the 13-month smoothed series from the daily data, checks my numbers against SILSO's
