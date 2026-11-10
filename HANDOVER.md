@@ -34,8 +34,9 @@ Environment: Windows 11, Python 3.11.8, pandas 3.1.1, numpy 2.4.6, Streamlit 1.6
 | `ruff check .` / `ruff format --check .` | all checks passed / 25 files already formatted |
 | Mutation check (break code on purpose, rerun tests) | untapered weights → 4 tests fail; half-even rounding → 3 fail; never-skip ingest → 2 fail; removing the first overwrite guard → 0 fail, because the second guard before the rename still refuses (expected; behaviour unchanged) |
 | `streamlit run streamlit_app.py` + headless Chrome screenshots | all four pages render with the live run |
-| `docker build -t sunspot-pipeline .` | not run locally: Docker Desktop's engine wasn't running on this machine. The CI `docker` job builds the image |
-| GitHub Actions CI | _pending: repo not pushed yet_ |
+| `docker build -t sunspot-pipeline .` | not run locally: Docker Desktop's engine wasn't running on this machine. The image builds successfully in CI (see below) |
+| `git push -u origin main` | pushed to https://github.com/MadniAbdulWahab/sunspot-pipeline |
+| GitHub Actions CI | **passing**, [run 42901280637](https://github.com/MadniAbdulWahab/sunspot-pipeline/actions/runs/42901280637): `test (3.11)` success, `test (3.12)` success (lint + pytest in each), `docker` build success |
 | Live URL (Streamlit Community Cloud) | _pending: not deployed yet_ |
 
 Input files for that run (SILSO `Last-Modified` 2026-11-01):
@@ -91,4 +92,4 @@ The full reasoning is in the README ("Design decisions"). In short:
 - Streamlit Community Cloud storage is ephemeral, so the deployed archive resets on restart.
 - No scheduled runs yet, and no diff between consecutive runs when SILSO revises provisional values.
 - SILSO's rounding of exact ties can't be reproduced; those months are reported separately.
-- Docker image not built locally (engine not running); it relies on the CI build.
+- Docker image built in CI only; I haven't run the container locally yet.
