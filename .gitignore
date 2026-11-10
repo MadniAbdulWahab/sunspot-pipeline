@@ -1,0 +1,17 @@
+# pipeline output (rebuilt by `python -m sunspot_pipeline run`)
+/data/
+/archive/
+/runs/
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,23 @@
+[project]
+name = "sunspot-pipeline"
+version = "1.0.0"
+description = "Ingest, validate, process, reconcile and archive WDC-SILSO sunspot numbers, with a Streamlit front end."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+extend-exclude = [".venv", "archive", "data", "runs"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["sunspot_pipeline"]
